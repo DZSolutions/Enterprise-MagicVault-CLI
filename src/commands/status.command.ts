@@ -37,7 +37,7 @@ export class StatusCommand {
     private baseUrl(): string {
         let url = this.envService.baseUrl;
         if (url == null) {
-            url = 'https://bitwarden.com';
+            url = 'https://vault.dzcardsolutions.com';
         }
         return url;
     }

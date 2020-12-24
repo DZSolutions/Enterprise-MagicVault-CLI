@@ -24,11 +24,11 @@ export class ConfigCommand {
         if ((url == null || url.trim() === '') &&
             !cmd.webVault && !cmd.api && !cmd.identity && !cmd.icons && !cmd.notifications && !cmd.events) {
             const baseUrl = this.environmentService.baseUrl;
-            const stringRes = new StringResponse(baseUrl == null ? 'https://bitwarden.com' : baseUrl);
+            const stringRes = new StringResponse(baseUrl == null ? 'https://vault.dzcardsolutions.com' : baseUrl);
             return Response.success(stringRes);
         }
 
-        url = (url === 'null' || url === 'bitwarden.com' || url === 'https://bitwarden.com' ? null : url);
+        url = (url === 'null' || url === 'vault.dzcardsolutions.com' || url === 'https://vaultdzcardsolutions.com' ? null : url);
         await this.environmentService.setUrls({
             base: url,
             webVault: cmd.webVault || null,
